@@ -23,8 +23,8 @@ android {
         applicationId = "com.ada.mudra"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.2.0"
 
         buildConfigField(
             "String", "SUPABASE_URL",
@@ -36,13 +36,32 @@ android {
         )
     }
 
+    signingConfigs {
+        create("release") {
+            // Keystore + passwords live only in the gitignored local.properties;
+            // back them up — losing them means the installed app can't be updated.
+            val keystore = rootProject.file(localProperties.getProperty("KEYSTORE_FILE", "release.keystore"))
+            if (keystore.exists()) {
+                storeFile = keystore
+                storePassword = localProperties.getProperty("KEYSTORE_PASSWORD", "")
+                keyAlias = localProperties.getProperty("KEY_ALIAS", "mudra")
+                keyPassword = localProperties.getProperty("KEY_PASSWORD", "")
+            }
+        }
+    }
+
     buildTypes {
         release {
+            // Minification stays off until we can test an R8 build on a real
+            // device — supabase/ktor/serialization are easy to break silently.
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            if (signingConfigs.getByName("release").storeFile?.exists() == true) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
     compileOptions {

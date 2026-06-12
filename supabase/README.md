@@ -1,11 +1,18 @@
 # Mudra — Supabase setup (Milestone 3)
 
-## 1. Apply the schema (one copy-paste, ~30 seconds)
+## 1. Apply the schema (two copy-pastes, ~1 minute)
 
 1. Open your project: https://supabase.com/dashboard → project `miimxktfpkgslcdtkzsr`.
 2. Left sidebar → **SQL Editor** → **New query**.
 3. Copy the entire contents of [`migrations/20260613000000_init.sql`](migrations/20260613000000_init.sql), paste, press **Run**.
 4. You should see "Success. No rows returned".
+5. Repeat with [`migrations/20260613001000_realtime.sql`](migrations/20260613001000_realtime.sql)
+   — this turns on instant updates between family phones.
+
+Optional but recommended for smoother onboarding: **Authentication →
+Sign In / Providers → Email → turn OFF "Confirm email"**. Otherwise every new
+account must click a link in their inbox before they can sign in (the app
+explains this when it happens, so it works either way).
 
 Verify it worked:
 - **Table Editor** now lists: `profiles`, `families`, `family_members`, `senior_profiles`,

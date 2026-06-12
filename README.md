@@ -64,12 +64,31 @@ app/src/main/java/com/ada/mudra/
 Everything stays on the phone in this MVP: contacts, photos and settings are
 stored in app-private storage. Nothing is uploaded, tracked, or shared.
 
-## What's next (not in this MVP)
+## Family sync (v0.2)
 
-- **Remote caregiver control** — the son/daughter managing contacts, photos and
-  settings *from their own phone*, via Supabase (auth, Postgres + RLS, private
-  storage bucket, realtime sync). The repository layer is already shaped for
-  this. Needs: a Supabase project URL + anon key.
+Family Setup now has **Account & Sync**: create an account, create your
+family, and contacts + photos sync through Supabase (Postgres with Row Level
+Security + a private storage bucket). Sign in with the **same account** on the
+parent's phone and on yours — changes made on one phone appear on the other
+within a second via Realtime. The senior screens always read the local cache,
+so everything keeps working offline.
+
+One-time backend setup: see [supabase/README.md](supabase/README.md)
+(two SQL files to paste into the Supabase SQL Editor).
+
+## Release builds
+
+`./gradlew assembleRelease` produces a signed APK at
+`app/build/outputs/apk/release/app-release.apk` you can install on any phone
+("sideload"). Signing uses `release.keystore` + passwords from the gitignored
+`local.properties`. **Back both up** — losing them means installed phones
+can't receive updates. Code shrinking (R8) is intentionally off until we've
+soak-tested it on devices.
+
+## What's next (not yet built)
+
 - **Video calling** — behind the existing `VideoCallProvider` interface
   (Jitsi for prototype or Daily for product-grade tokens via Edge Functions).
+- **Caregiver web dashboard** (Next.js on the same Supabase tables),
+  family invites, remote PIN reset.
 - **I Need Help button**, caregiver audit log, iOS version (Android-first per spec).

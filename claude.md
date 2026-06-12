@@ -1197,3 +1197,23 @@ Then list the questions from Section 4.
 - Caregiver control: ADA wants the son/daughter to control the senior's app interface remotely. MVP ships on-device Family Setup behind a PIN (default 1234); remote control = next milestone, requires Supabase URL + anon key from ADA.
 - Supabase credentials: NOT yet provided. MVP is local-only (DataStore + app-private files).
 - minSdk 26, targetSdk 35, Kotlin 2.0.21, AGP 8.7.3, Gradle 8.10.2, Compose BOM 2024.12.01.
+
+## 18. Milestone 3 decisions — 2026-06-13
+
+- Caregiver auth: **email + password** (not the magic-link default). Reason: magic links need
+  deep-link handling and email-template changes; password auth works out of the box and suits
+  the "same account on both phones" pairing model. Can add magic link later.
+- Pairing model (MVP): the SAME account signs in on the caregiver's phone and the senior's
+  phone. Family invites (multiple accounts per family) are schema-ready but have no UI yet.
+- Sync model: local-first. Senior screens only read DataStore; SyncManager pushes caregiver
+  edits immediately and pulls (server-wins) on sign-in and on Realtime change events for
+  trusted_contacts / gallery_items.
+- IDs are client-generated UUIDs shared between local cache and Postgres rows.
+- Storage paths: avatars at <family_id>/avatars/<contact_id>.img, gallery at
+  <family_id>/<senior_profile_id>/<photo_id>.img in private bucket family-gallery.
+- Release signing: release.keystore at repo root (gitignored), passwords in local.properties.
+  ADA must back both up. R8/minify OFF deliberately until device soak-testing.
+- v0.2.0 (versionCode 2). Verified on emulator: home tiles, PIN, caregiver menu,
+  Account & Sync screen all render; signed release APK verified with apksigner.
+- Supabase migrations NOT yet applied by ADA as of 2026-06-13 (REST probe: PGRST205).
+  Two files in supabase/migrations/ must be pasted into the SQL Editor.

@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.ada.mudra.data.model.AppSettings
 import com.ada.mudra.data.model.GalleryPhoto
 import com.ada.mudra.data.model.TrustedContact
+import com.ada.mudra.data.remote.SyncManager
 import com.ada.mudra.domain.provider.AndroidPhoneCallProvider
 import com.ada.mudra.domain.provider.AndroidWhatsAppProvider
 import com.ada.mudra.domain.provider.PhoneCallProvider
@@ -20,9 +21,14 @@ import java.io.File
 class MudraViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = (application as MudraApp).repository
+    private val sync = (application as MudraApp).syncManager
 
     val phoneCallProvider: PhoneCallProvider = AndroidPhoneCallProvider(application)
     val whatsAppProvider: WhatsAppProvider = AndroidWhatsAppProvider(application)
+
+    val syncState: StateFlow<SyncManager.State> = sync.state
+    val syncError: StateFlow<String?> = sync.lastError
+    val syncing: StateFlow<Boolean> = sync.syncing
 
     val contacts: StateFlow<List<TrustedContact>> = repository.contacts
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
@@ -43,11 +49,17 @@ class MudraViewModel(application: Application) : AndroidViewModel(application) {
     fun photoFile(photo: GalleryPhoto): File = repository.photoFile(photo.fileName)
 
     fun upsertContact(contact: TrustedContact) {
-        viewModelScope.launch { repository.upsertContact(contact) }
+        viewModelScope.launch {
+            repository.upsertContact(contact)
+            sync.onContactSaved(contact)
+        }
     }
 
     fun deleteContact(id: String) {
-        viewModelScope.launch { repository.deleteContact(id) }
+        viewModelScope.launch {
+            repository.deleteContact(id)
+            sync.onContactDeleted(id)
+        }
     }
 
     fun saveContactAvatar(uri: Uri, onSaved: (String) -> Unit) {
@@ -55,15 +67,51 @@ class MudraViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun addPhoto(uri: Uri) {
-        viewModelScope.launch { repository.addPhoto(uri) }
+        viewModelScope.launch {
+            val photo = repository.addPhoto(uri)
+            sync.onPhotoAdded(photo)
+        }
     }
 
     fun updatePhotoCaption(id: String, caption: String) {
-        viewModelScope.launch { repository.updatePhotoCaption(id, caption) }
+        viewModelScope.launch {
+            repository.updatePhotoCaption(id, caption)
+            sync.onCaptionChanged(id, caption)
+        }
     }
 
     fun deletePhoto(id: String) {
-        viewModelScope.launch { repository.deletePhoto(id) }
+        viewModelScope.launch {
+            repository.deletePhoto(id)
+            sync.onPhotoDeleted(id)
+        }
+    }
+
+    // ---- Account & sync ----
+
+    fun signIn(email: String, password: String) {
+        viewModelScope.launch { sync.signIn(email, password) }
+    }
+
+    fun signUp(email: String, password: String, onPendingConfirmation: () -> Unit) {
+        viewModelScope.launch {
+            sync.signUp(email, password)
+            if (sync.lastError.value == null && sync.awaitingEmailConfirmation()) {
+                onPendingConfirmation()
+            }
+        }
+    }
+
+    fun signOut() {
+        viewModelScope.launch { sync.signOut() }
+    }
+
+    fun createFamily(familyName: String, seniorName: String) {
+        viewModelScope.launch { sync.createFamily(familyName, seniorName) }
+    }
+
+    fun syncNow() {
+        viewModelScope.launch { sync.pullAll() }
     }
 
     fun setHapticsEnabled(enabled: Boolean) {

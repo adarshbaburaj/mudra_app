@@ -94,4 +94,24 @@
     <string name="settings_launcher">मुद्रा को फ़ोन की होम स्क्रीन बनाएँ</string>
     <string name="settings_launcher_hint">इसे चालू करने के बाद, खुलने वाली फ़ोन स्क्रीन में मुद्रा को होम ऐप चुनें। उसी तरह वापस भी बदल सकते हैं।</string>
     <string name="settings_privacy">मुद्रा तस्वीरें और संपर्क सिर्फ़ इसी फ़ोन में रखता है। कुछ भी बाहर नहीं भेजा जाता।</string>
+
+    <!-- Account & sync -->
+    <string name="account_title">खाता और सिंक</string>
+    <string name="account_not_configured">इस बिल्ड में ऑनलाइन सिंक नहीं है। ऐप सिर्फ़ इसी फ़ोन पर काम करता है।</string>
+    <string name="account_signed_out_body">साइन इन करें ताकि परिवार कहीं से भी इस फ़ोन को संभाल सके। माता-पिता के फ़ोन और अपने फ़ोन पर एक ही खाता इस्तेमाल करें।</string>
+    <string name="account_email">ईमेल</string>
+    <string name="account_password">पासवर्ड (कम से कम 6 अक्षर)</string>
+    <string name="account_sign_in">साइन इन</string>
+    <string name="account_sign_up">खाता बनाएँ</string>
+    <string name="account_check_email">बस थोड़ा बाकी है। हमने जो पुष्टि ईमेल भेजा है उसे खोलकर लिंक दबाएँ, फिर वापस आकर साइन इन करें।</string>
+    <string name="account_needs_family_title">अपना परिवार बनाएँ</string>
+    <string name="account_family_name">परिवार का नाम (जैसे: हमारा परिवार)</string>
+    <string name="account_senior_name">इस फ़ोन को इस्तेमाल करने वाले माता-पिता का नाम</string>
+    <string name="account_create_family">परिवार बनाएँ</string>
+    <string name="account_connected">जुड़ गया। संपर्क और तस्वीरें अब हर परिवार के फ़ोन पर एक जैसी रहेंगी।</string>
+    <string name="account_sync_now">अभी सिंक करें</string>
+    <string name="account_syncing">सिंक हो रहा है…</string>
+    <string name="account_sign_out">साइन आउट</string>
+    <string name="account_loading">जुड़ रहा है…</string>
+    <string name="account_error_prefix">कुछ गड़बड़ हुई: %1$s</string>
 </resources>

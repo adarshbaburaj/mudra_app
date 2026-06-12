@@ -19,6 +19,7 @@ fun CaregiverHomeScreen(
     onContacts: () -> Unit,
     onPhotos: () -> Unit,
     onSettings: () -> Unit,
+    onAccount: () -> Unit,
     onBackToSenior: () -> Unit,
 ) {
     Column(
@@ -43,6 +44,10 @@ fun CaregiverHomeScreen(
         GiantButton(
             label = stringResource(R.string.caregiver_settings),
             onClick = onSettings,
+        )
+        GiantButton(
+            label = stringResource(R.string.account_title),
+            onClick = onAccount,
         )
 
         Spacer(modifier = Modifier.weight(1f))

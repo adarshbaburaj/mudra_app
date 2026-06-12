@@ -75,9 +75,17 @@ class MudraRepository(private val context: Context) {
         copyIntoDir(uri, avatarsDir())
     }
 
+    /** Replaces the whole contact list (used by sync pulls; server wins). */
+    suspend fun replaceAllContacts(contacts: List<TrustedContact>) {
+        context.dataStore.edit { prefs ->
+            prefs[contactsKey] =
+                json.encodeToString(ListSerializer(TrustedContact.serializer()), contacts)
+        }
+    }
+
     // ---- Gallery ----
 
-    suspend fun addPhoto(uri: Uri, caption: String = "") {
+    suspend fun addPhoto(uri: Uri, caption: String = ""): GalleryPhoto {
         val fileName = withContext(Dispatchers.IO) { copyIntoDir(uri, galleryDir()) }
         val photo = GalleryPhoto(
             id = UUID.randomUUID().toString(),
@@ -90,7 +98,30 @@ class MudraRepository(private val context: Context) {
             prefs[photosKey] =
                 json.encodeToString(ListSerializer(GalleryPhoto.serializer()), current + photo)
         }
+        return photo
     }
+
+    /** Replaces the whole photo list (used by sync pulls; server wins). */
+    suspend fun replaceAllPhotos(photos: List<GalleryPhoto>) {
+        context.dataStore.edit { prefs ->
+            prefs[photosKey] =
+                json.encodeToString(ListSerializer(GalleryPhoto.serializer()), photos)
+        }
+    }
+
+    /** Writes downloaded avatar bytes into local cache; returns the file name. */
+    suspend fun writeAvatarBytes(fileName: String, bytes: ByteArray): String =
+        withContext(Dispatchers.IO) {
+            File(avatarsDir(), fileName).writeBytes(bytes)
+            fileName
+        }
+
+    /** Writes downloaded gallery bytes into local cache; returns the file name. */
+    suspend fun writeGalleryBytes(fileName: String, bytes: ByteArray): String =
+        withContext(Dispatchers.IO) {
+            File(galleryDir(), fileName).writeBytes(bytes)
+            fileName
+        }
 
     suspend fun updatePhotoCaption(id: String, caption: String) {
         context.dataStore.edit { prefs ->

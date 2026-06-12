@@ -97,6 +97,26 @@
     <string name="settings_launcher_hint">After turning this on, choose Mudra as the Home app in the phone screen that opens. You can switch back the same way.</string>
     <string name="settings_privacy">Mudra keeps photos and contacts only on this phone. Nothing is uploaded or shared.</string>
 
+    <!-- Account & sync -->
+    <string name="account_title">Account &amp; Sync</string>
+    <string name="account_not_configured">Online sync is not set up in this build. The app works on this phone only.</string>
+    <string name="account_signed_out_body">Sign in so the family can manage this phone from anywhere. Use the same account on the parent\'s phone and on yours.</string>
+    <string name="account_email">Email</string>
+    <string name="account_password">Password (at least 6 characters)</string>
+    <string name="account_sign_in">Sign in</string>
+    <string name="account_sign_up">Create account</string>
+    <string name="account_check_email">Almost done. Open the confirmation email we sent you, tap the link, then come back and sign in.</string>
+    <string name="account_needs_family_title">Create your family</string>
+    <string name="account_family_name">Family name (for example: Our Family)</string>
+    <string name="account_senior_name">Name of the parent who uses this phone</string>
+    <string name="account_create_family">Create family</string>
+    <string name="account_connected">Connected. Contacts and photos now stay in sync on every family phone.</string>
+    <string name="account_sync_now">Sync now</string>
+    <string name="account_syncing">Syncing…</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_loading">Connecting…</string>
+    <string name="account_error_prefix">Something went wrong: %1$s</string>
+
     <!-- Language names stay in their own script on purpose -->
     <string name="language_english" translatable="false">English</string>
     <string name="language_malayalam" translatable="false">മലയാളം</string>

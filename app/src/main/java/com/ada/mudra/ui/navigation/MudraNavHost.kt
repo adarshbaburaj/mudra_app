@@ -10,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.ada.mudra.MudraViewModel
 import com.ada.mudra.features.calling.CallConfirmScreen
+import com.ada.mudra.features.caregiver.AccountScreen
 import com.ada.mudra.features.caregiver.CaregiverHomeScreen
 import com.ada.mudra.features.caregiver.CaregiverContactsScreen
 import com.ada.mudra.features.caregiver.ContactEditScreen
@@ -35,6 +36,7 @@ object Routes {
     const val CONTACT_EDIT = "caregiver/contact?id={contactId}"
     const val CAREGIVER_PHOTOS = "caregiver/photos"
     const val CAREGIVER_SETTINGS = "caregiver/settings"
+    const val CAREGIVER_ACCOUNT = "caregiver/account"
 
     fun callConfirm(contactId: String) = "confirm/call/$contactId"
     fun waConfirm(contactId: String) = "confirm/whatsapp/$contactId"
@@ -125,6 +127,7 @@ fun MudraNavHost(viewModel: MudraViewModel, modifier: Modifier = Modifier) {
                 onContacts = { navController.navigate(Routes.CAREGIVER_CONTACTS) },
                 onPhotos = { navController.navigate(Routes.CAREGIVER_PHOTOS) },
                 onSettings = { navController.navigate(Routes.CAREGIVER_SETTINGS) },
+                onAccount = { navController.navigate(Routes.CAREGIVER_ACCOUNT) },
                 onBackToSenior = { navController.goHome() },
             )
         }
@@ -164,6 +167,13 @@ fun MudraNavHost(viewModel: MudraViewModel, modifier: Modifier = Modifier) {
 
         composable(Routes.CAREGIVER_SETTINGS) {
             SettingsScreen(
+                viewModel = viewModel,
+                onGoBack = { navController.popBackStack() },
+            )
+        }
+
+        composable(Routes.CAREGIVER_ACCOUNT) {
+            AccountScreen(
                 viewModel = viewModel,
                 onGoBack = { navController.popBackStack() },
             )
