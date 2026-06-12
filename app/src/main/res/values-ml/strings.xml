@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Senior home -->
+    <string name="home_question">എന്താണ് ചെയ്യേണ്ടത്?</string>
+    <string name="tile_call_family">വീട്ടുകാരെ വിളിക്കുക</string>
+    <string name="tile_whatsapp_family">വാട്ട്സ്ആപ്പിൽ സംസാരിക്കുക</string>
+    <string name="tile_family_photos">കുടുംബ ഫോട്ടോകൾ</string>
+    <string name="family_setup">കുടുംബ ക്രമീകരണം</string>
+    <string name="family_setup_hint">മക്കൾക്കും സഹായികൾക്കും വേണ്ടി</string>
+
+    <!-- Contact lists -->
+    <string name="contacts_call_title">ആരെയാണ് വിളിക്കേണ്ടത്?</string>
+    <string name="contacts_whatsapp_title">വാട്ട്സ്ആപ്പിൽ ആരോടാണ് സംസാരിക്കേണ്ടത്?</string>
+    <string name="contacts_empty">ഇവിടെ ആരും ഇല്ല. കുടുംബ ക്രമീകരണത്തിൽ ചേർക്കാൻ വീട്ടുകാരോട് പറയുക.</string>
+
+    <!-- Shared actions -->
+    <string name="go_back">തിരികെ പോകുക</string>
+    <string name="go_home">ഹോമിലേക്ക് മടങ്ങുക</string>
+    <string name="save">സേവ് ചെയ്യുക</string>
+    <string name="delete">നീക്കം ചെയ്യുക</string>
+    <string name="cancel">വേണ്ട</string>
+    <string name="try_again">വീണ്ടും ശ്രമിക്കുക</string>
+
+    <!-- Call confirm -->
+    <string name="call_confirm_title">%1$s-നെ വിളിക്കണോ?</string>
+    <string name="call_now">ഇപ്പോൾ വിളിക്കുക</string>
+    <string name="call_failed">ഫോൺ തുറന്നില്ല. വീണ്ടും ശ്രമിക്കുക, അല്ലെങ്കിൽ വീട്ടുകാരോട് സഹായം ചോദിക്കുക.</string>
+
+    <!-- WhatsApp confirm -->
+    <string name="wa_confirm_title">%1$s-നോട് വാട്ട്സ്ആപ്പിൽ സംസാരിക്കണോ?</string>
+    <string name="wa_confirm_body">കുറച്ച് നേരത്തേക്ക് മുദ്രയിൽ നിന്ന് പുറത്തുപോകും. തിരികെ വരാൻ ഫോണിന്റെ ഹോം ബട്ടൺ അമർത്തി മുദ്ര തുറക്കുക.</string>
+    <string name="wa_open">വാട്ട്സ്ആപ്പ് തുറക്കുക</string>
+    <string name="wa_missing">ഈ ഫോണിൽ വാട്ട്സ്ആപ്പ് ഇല്ല.</string>
+    <string name="wa_call_instead">%1$s-നെ ഫോണിൽ വിളിക്കുക</string>
+    <string name="wa_failed">വാട്ട്സ്ആപ്പ് തുറന്നില്ല. വീണ്ടും ശ്രമിക്കുക, അല്ലെങ്കിൽ ഫോണിൽ വിളിക്കുക.</string>
+
+    <!-- Gallery -->
+    <string name="gallery_title">കുടുംബ ഫോട്ടോകൾ</string>
+    <string name="gallery_empty">ഇതുവരെ ഫോട്ടോകൾ ഇല്ല. കുടുംബ ക്രമീകരണത്തിൽ ഫോട്ടോകൾ ചേർക്കാം.</string>
+    <string name="gallery_counter">ഫോട്ടോ %1$d / %2$d</string>
+    <string name="previous_photo">മുമ്പത്തേത്</string>
+    <string name="next_photo">അടുത്തത്</string>
+    <string name="cd_family_photo">കുടുംബ ഫോട്ടോ</string>
+
+    <!-- PIN -->
+    <string name="pin_title">കുടുംബ ക്രമീകരണം</string>
+    <string name="pin_body">ക്രമീകരണം തുറക്കാൻ കുടുംബ പിൻ നൽകുക.</string>
+    <string name="pin_field_label">പിൻ</string>
+    <string name="pin_open">തുറക്കുക</string>
+    <string name="pin_wrong">പിൻ ശരിയല്ല. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="pin_default_hint">ആദ്യ തവണയാണോ? തുടക്ക പിൻ 1234 ആണ്. ക്രമീകരണത്തിൽ അത് മാറ്റുക.</string>
+
+    <!-- Caregiver home -->
+    <string name="caregiver_title">കുടുംബ ക്രമീകരണം</string>
+    <string name="caregiver_contacts">വിശ്വസ്ത കോൺടാക്റ്റുകൾ</string>
+    <string name="caregiver_photos">ഫോട്ടോകൾ കൈകാര്യം ചെയ്യുക</string>
+    <string name="caregiver_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="caregiver_back_senior">ലളിത സ്ക്രീനിലേക്ക് മടങ്ങുക</string>
+
+    <!-- Contact editing -->
+    <string name="contact_add">കോൺടാക്റ്റ് ചേർക്കുക</string>
+    <string name="contact_edit">കോൺടാക്റ്റ് മാറ്റുക</string>
+    <string name="contact_name">പേര്</string>
+    <string name="contact_relation">ബന്ധം (ഉദാ: മകൻ, മകൾ)</string>
+    <string name="contact_phone">ഫോൺ നമ്പർ, ഉദാ: +919812345678</string>
+    <string name="contact_whatsapp">വാട്ട്സ്ആപ്പ് നമ്പർ (ഫോൺ നമ്പർ തന്നെയെങ്കിൽ ഒഴിച്ചിടുക)</string>
+    <string name="contact_can_call">വിളിക്കുന്ന പട്ടികയിൽ കാണിക്കുക</string>
+    <string name="contact_can_whatsapp">വാട്ട്സ്ആപ്പ് പട്ടികയിൽ കാണിക്കുക</string>
+    <string name="contact_photo_add">ഫോട്ടോ ചേർക്കുക</string>
+    <string name="contact_photo_change">ഫോട്ടോ മാറ്റുക</string>
+    <string name="cd_contact_photo">%1$s-ന്റെ ഫോട്ടോ</string>
+    <string name="delete_contact_confirm">%1$s-നെ വിശ്വസ്ത കോൺടാക്റ്റുകളിൽ നിന്ന് നീക്കണോ?</string>
+    <string name="error_name_required">പേര് നൽകുക.</string>
+    <string name="error_relation_required">ബന്ധം നൽകുക, ഉദാ: മകൻ, മകൾ.</string>
+    <string name="error_phone_invalid">ഫോൺ നമ്പർ + ഉം രാജ്യ കോഡും ചേർത്ത് തുടങ്ങണം, ഉദാ: +919812345678.</string>
+    <string name="error_whatsapp_invalid">വാട്ട്സ്ആപ്പ് നമ്പർ + ഉം രാജ്യ കോഡും ചേർത്ത് തുടങ്ങണം, അല്ലെങ്കിൽ ഒഴിച്ചിടുക.</string>
+
+    <!-- Photo management -->
+    <string name="photos_add">ഫോട്ടോ ചേർക്കുക</string>
+    <string name="photo_caption">വിവരണം</string>
+    <string name="photo_caption_edit">വിവരണം മാറ്റുക</string>
+    <string name="photo_no_caption">വിവരണം ഇല്ല</string>
+    <string name="delete_photo_confirm">ഈ ഫോട്ടോ ഈ ഫോണിൽ നിന്ന് നീക്കണോ?</string>
+
+    <!-- Settings -->
+    <string name="settings_haptics">ഓരോ ടാപ്പിലും ശക്തമായ വിറയൽ</string>
+    <string name="settings_language">ഭാഷ</string>
+    <string name="settings_change_pin">കുടുംബ പിൻ മാറ്റുക</string>
+    <string name="settings_new_pin">പുതിയ പിൻ (4 മുതൽ 6 അക്കം വരെ)</string>
+    <string name="settings_confirm_pin">പുതിയ പിൻ വീണ്ടും നൽകുക</string>
+    <string name="settings_pin_saved">പിൻ മാറ്റി.</string>
+    <string name="settings_pin_mismatch">രണ്ട് പിന്നുകളും ഒരുപോലെയല്ല.</string>
+    <string name="settings_pin_invalid">പിൻ 4 മുതൽ 6 അക്കം വരെ ആയിരിക്കണം.</string>
+    <string name="settings_launcher">മുദ്രയെ ഫോണിന്റെ ഹോം സ്ക്രീനായി ഉപയോഗിക്കുക</string>
+    <string name="settings_launcher_hint">ഇത് ഓണാക്കിയ ശേഷം, തുറക്കുന്ന ഫോൺ സ്ക്രീനിൽ മുദ്രയെ ഹോം ആപ്പായി തിരഞ്ഞെടുക്കുക. അതേ വഴിയിൽ തിരികെ മാറ്റാം.</string>
+    <string name="settings_privacy">മുദ്ര ഫോട്ടോകളും കോൺടാക്റ്റുകളും ഈ ഫോണിൽ മാത്രം സൂക്ഷിക്കുന്നു. ഒന്നും പുറത്തേക്ക് അയയ്ക്കുന്നില്ല.</string>
+</resources>

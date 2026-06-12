@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Mudra</string>
+
+    <!-- Senior home -->
+    <string name="home_question">What do you want to do?</string>
+    <string name="tile_call_family">Call Family</string>
+    <string name="tile_whatsapp_family">WhatsApp Family</string>
+    <string name="tile_family_photos">Family Photos</string>
+    <string name="family_setup">Family Setup</string>
+    <string name="family_setup_hint">For sons, daughters and helpers</string>
+
+    <!-- Contact lists -->
+    <string name="contacts_call_title">Who do you want to call?</string>
+    <string name="contacts_whatsapp_title">Who do you want to talk to on WhatsApp?</string>
+    <string name="contacts_empty">No family members here yet. Ask your family to add them in Family Setup.</string>
+
+    <!-- Shared actions -->
+    <string name="go_back">Go back</string>
+    <string name="go_home">Go back Home</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="try_again">Try again</string>
+
+    <!-- Call confirm -->
+    <string name="call_confirm_title">Call %1$s?</string>
+    <string name="call_now">Call now</string>
+    <string name="call_failed">The phone did not open. Please try again, or ask your family for help.</string>
+
+    <!-- WhatsApp confirm -->
+    <string name="wa_confirm_title">Open WhatsApp with %1$s?</string>
+    <string name="wa_confirm_body">You will leave Mudra for a moment. To come back, press your phone’s Home button and tap Mudra.</string>
+    <string name="wa_open">Open WhatsApp</string>
+    <string name="wa_missing">WhatsApp is not on this phone.</string>
+    <string name="wa_call_instead">Call %1$s instead</string>
+    <string name="wa_failed">WhatsApp did not open. Please try again, or call instead.</string>
+
+    <!-- Gallery -->
+    <string name="gallery_title">Family Photos</string>
+    <string name="gallery_empty">No photos yet. Your family can add photos in Family Setup.</string>
+    <string name="gallery_counter">Photo %1$d of %2$d</string>
+    <string name="previous_photo">Previous</string>
+    <string name="next_photo">Next</string>
+    <string name="cd_family_photo">Family photo</string>
+
+    <!-- PIN -->
+    <string name="pin_title">Family Setup</string>
+    <string name="pin_body">Enter the family PIN to open setup.</string>
+    <string name="pin_field_label">PIN</string>
+    <string name="pin_open">Open</string>
+    <string name="pin_wrong">That PIN is not right. Try again.</string>
+    <string name="pin_default_hint">First time? The starting PIN is 1234. Please change it in Settings.</string>
+
+    <!-- Caregiver home -->
+    <string name="caregiver_title">Family Setup</string>
+    <string name="caregiver_contacts">Trusted contacts</string>
+    <string name="caregiver_photos">Manage photos</string>
+    <string name="caregiver_settings">Settings</string>
+    <string name="caregiver_back_senior">Back to simple screen</string>
+
+    <!-- Contact editing -->
+    <string name="contact_add">Add contact</string>
+    <string name="contact_edit">Edit contact</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_relation">Relation (for example Son, Daughter)</string>
+    <string name="contact_phone">Phone number, for example +919812345678</string>
+    <string name="contact_whatsapp">WhatsApp number (leave empty if same as phone)</string>
+    <string name="contact_can_call">Show in Call Family</string>
+    <string name="contact_can_whatsapp">Show in WhatsApp Family</string>
+    <string name="contact_photo_add">Add photo</string>
+    <string name="contact_photo_change">Change photo</string>
+    <string name="cd_contact_photo">Photo of %1$s</string>
+    <string name="delete_contact_confirm">Remove %1$s from trusted contacts?</string>
+    <string name="error_name_required">Please enter a name.</string>
+    <string name="error_relation_required">Please enter a relation, like Son or Daughter.</string>
+    <string name="error_phone_invalid">The phone number must start with + and the country code, for example +919812345678.</string>
+    <string name="error_whatsapp_invalid">The WhatsApp number must start with + and the country code, or stay empty.</string>
+
+    <!-- Photo management -->
+    <string name="photos_add">Add photo</string>
+    <string name="photo_caption">Caption</string>
+    <string name="photo_caption_edit">Edit caption</string>
+    <string name="photo_no_caption">No caption</string>
+    <string name="delete_photo_confirm">Delete this photo from this phone?</string>
+
+    <!-- Settings -->
+    <string name="settings_haptics">Strong vibration on every tap</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_change_pin">Change family PIN</string>
+    <string name="settings_new_pin">New PIN (4 to 6 numbers)</string>
+    <string name="settings_confirm_pin">Repeat new PIN</string>
+    <string name="settings_pin_saved">PIN changed.</string>
+    <string name="settings_pin_mismatch">The two PINs do not match.</string>
+    <string name="settings_pin_invalid">The PIN must be 4 to 6 numbers.</string>
+    <string name="settings_launcher">Use Mudra as the phone’s home screen</string>
+    <string name="settings_launcher_hint">After turning this on, choose Mudra as the Home app in the phone screen that opens. You can switch back the same way.</string>
+    <string name="settings_privacy">Mudra keeps photos and contacts only on this phone. Nothing is uploaded or shared.</string>
+
+    <!-- Language names stay in their own script on purpose -->
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_malayalam" translatable="false">മലയാളം</string>
+    <string name="language_hindi" translatable="false">हिन्दी</string>
+</resources>

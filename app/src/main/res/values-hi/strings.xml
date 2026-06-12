@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Senior home -->
+    <string name="home_question">आप क्या करना चाहते हैं?</string>
+    <string name="tile_call_family">परिवार को फ़ोन करें</string>
+    <string name="tile_whatsapp_family">व्हाट्सऐप पर बात करें</string>
+    <string name="tile_family_photos">परिवार की तस्वीरें</string>
+    <string name="family_setup">परिवार सेटअप</string>
+    <string name="family_setup_hint">बेटे, बेटियों और मददगारों के लिए</string>
+
+    <!-- Contact lists -->
+    <string name="contacts_call_title">किसे फ़ोन करना है?</string>
+    <string name="contacts_whatsapp_title">व्हाट्सऐप पर किससे बात करनी है?</string>
+    <string name="contacts_empty">यहाँ अभी कोई नहीं है। परिवार से कहें कि वे परिवार सेटअप में नाम जोड़ें।</string>
+
+    <!-- Shared actions -->
+    <string name="go_back">वापस जाएँ</string>
+    <string name="go_home">होम पर वापस जाएँ</string>
+    <string name="save">सेव करें</string>
+    <string name="delete">हटाएँ</string>
+    <string name="cancel">रहने दें</string>
+    <string name="try_again">फिर से कोशिश करें</string>
+
+    <!-- Call confirm -->
+    <string name="call_confirm_title">%1$s को फ़ोन करें?</string>
+    <string name="call_now">अभी फ़ोन करें</string>
+    <string name="call_failed">फ़ोन नहीं खुला। फिर से कोशिश करें, या परिवार से मदद माँगें।</string>
+
+    <!-- WhatsApp confirm -->
+    <string name="wa_confirm_title">%1$s से व्हाट्सऐप पर बात करें?</string>
+    <string name="wa_confirm_body">आप थोड़ी देर के लिए मुद्रा से बाहर जाएँगे। वापस आने के लिए फ़ोन का होम बटन दबाकर मुद्रा खोलें।</string>
+    <string name="wa_open">व्हाट्सऐप खोलें</string>
+    <string name="wa_missing">इस फ़ोन में व्हाट्सऐप नहीं है।</string>
+    <string name="wa_call_instead">%1$s को फ़ोन करें</string>
+    <string name="wa_failed">व्हाट्सऐप नहीं खुला। फिर से कोशिश करें, या फ़ोन करें।</string>
+
+    <!-- Gallery -->
+    <string name="gallery_title">परिवार की तस्वीरें</string>
+    <string name="gallery_empty">अभी कोई तस्वीर नहीं है। परिवार सेटअप में तस्वीरें जोड़ी जा सकती हैं।</string>
+    <string name="gallery_counter">तस्वीर %1$d / %2$d</string>
+    <string name="previous_photo">पिछली</string>
+    <string name="next_photo">अगली</string>
+    <string name="cd_family_photo">परिवार की तस्वीर</string>
+
+    <!-- PIN -->
+    <string name="pin_title">परिवार सेटअप</string>
+    <string name="pin_body">सेटअप खोलने के लिए परिवार का पिन डालें।</string>
+    <string name="pin_field_label">पिन</string>
+    <string name="pin_open">खोलें</string>
+    <string name="pin_wrong">पिन सही नहीं है। फिर से कोशिश करें।</string>
+    <string name="pin_default_hint">पहली बार? शुरुआती पिन 1234 है। कृपया इसे सेटिंग्स में बदलें।</string>
+
+    <!-- Caregiver home -->
+    <string name="caregiver_title">परिवार सेटअप</string>
+    <string name="caregiver_contacts">भरोसेमंद संपर्क</string>
+    <string name="caregiver_photos">तस्वीरें प्रबंधित करें</string>
+    <string name="caregiver_settings">सेटिंग्स</string>
+    <string name="caregiver_back_senior">सरल स्क्रीन पर वापस जाएँ</string>
+
+    <!-- Contact editing -->
+    <string name="contact_add">संपर्क जोड़ें</string>
+    <string name="contact_edit">संपर्क बदलें</string>
+    <string name="contact_name">नाम</string>
+    <string name="contact_relation">रिश्ता (जैसे बेटा, बेटी)</string>
+    <string name="contact_phone">फ़ोन नंबर, जैसे +919812345678</string>
+    <string name="contact_whatsapp">व्हाट्सऐप नंबर (अगर फ़ोन नंबर ही है तो खाली छोड़ें)</string>
+    <string name="contact_can_call">फ़ोन सूची में दिखाएँ</string>
+    <string name="contact_can_whatsapp">व्हाट्सऐप सूची में दिखाएँ</string>
+    <string name="contact_photo_add">फ़ोटो जोड़ें</string>
+    <string name="contact_photo_change">फ़ोटो बदलें</string>
+    <string name="cd_contact_photo">%1$s की फ़ोटो</string>
+    <string name="delete_contact_confirm">%1$s को भरोसेमंद संपर्कों से हटाएँ?</string>
+    <string name="error_name_required">कृपया नाम लिखें।</string>
+    <string name="error_relation_required">कृपया रिश्ता लिखें, जैसे बेटा या बेटी।</string>
+    <string name="error_phone_invalid">फ़ोन नंबर + और देश कोड से शुरू होना चाहिए, जैसे +919812345678।</string>
+    <string name="error_whatsapp_invalid">व्हाट्सऐप नंबर + और देश कोड से शुरू होना चाहिए, या खाली रहे।</string>
+
+    <!-- Photo management -->
+    <string name="photos_add">तस्वीर जोड़ें</string>
+    <string name="photo_caption">कैप्शन</string>
+    <string name="photo_caption_edit">कैप्शन बदलें</string>
+    <string name="photo_no_caption">कोई कैप्शन नहीं</string>
+    <string name="delete_photo_confirm">यह तस्वीर इस फ़ोन से हटाएँ?</string>
+
+    <!-- Settings -->
+    <string name="settings_haptics">हर टैप पर तेज़ कंपन</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_change_pin">परिवार का पिन बदलें</string>
+    <string name="settings_new_pin">नया पिन (4 से 6 अंक)</string>
+    <string name="settings_confirm_pin">नया पिन दोबारा डालें</string>
+    <string name="settings_pin_saved">पिन बदल गया।</string>
+    <string name="settings_pin_mismatch">दोनों पिन एक जैसे नहीं हैं।</string>
+    <string name="settings_pin_invalid">पिन 4 से 6 अंकों का होना चाहिए।</string>
+    <string name="settings_launcher">मुद्रा को फ़ोन की होम स्क्रीन बनाएँ</string>
+    <string name="settings_launcher_hint">इसे चालू करने के बाद, खुलने वाली फ़ोन स्क्रीन में मुद्रा को होम ऐप चुनें। उसी तरह वापस भी बदल सकते हैं।</string>
+    <string name="settings_privacy">मुद्रा तस्वीरें और संपर्क सिर्फ़ इसी फ़ोन में रखता है। कुछ भी बाहर नहीं भेजा जाता।</string>
+</resources>
