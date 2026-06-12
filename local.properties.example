@@ -1,0 +1,7 @@
+# Copy this file to `local.properties` (same folder) and fill in the values.
+# `local.properties` is gitignored — your keys never reach GitHub.
+# Android Studio adds an `sdk.dir=...` line here automatically; keep it.
+
+# Supabase project (Settings > API in the Supabase dashboard)
+SUPABASE_URL=https://miimxktfpkgslcdtkzsr.supabase.co
+SUPABASE_KEY=sb_publishable_1f1KxVBN-ODEi8ysOu__JQ_paxEyx75
